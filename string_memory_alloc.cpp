@@ -31,7 +31,7 @@ char ** Memory_alloc(char ** name){
 gets_s(name[i] , 15);
 
 // to write string
-put_s(name[i], 15)
+printf("\n%s", t[i][j]);
 
 main(){
 	char **name_list = NULL;
