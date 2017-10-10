@@ -15,6 +15,13 @@ char *** allocateMem(char *** t){
 }
 
 void allocPlayerName(char *** t){
+		/*
+	for (int i = 0; i < 2; i++){
+	for (int j = 0; j < 3; j++){
+	gets_s(t[i][j], 15);
+	}
+	}
+	*/
 	t[0][0] = "p1";
 	t[0][1] = "p2";
 	t[0][2] = "p3";
