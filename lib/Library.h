@@ -4,18 +4,25 @@
 using namespace std;
 
 class Library{
-	vector<Book> bookList;
+	// use following it works
+	vector<Book*> bookList;
+	// can create another object to create an index of books
 
 public:
-	vector<Book> getBookList();
-	void setBookList(vector<Book>);		// rem
+	Library();
+	vector<Book*> getBookList();
+	void setBookList(vector<Book*>);		// rem
 
 	void ReadBookList();
-	void WriteBookList(vector<Book>);		
-	void ModifyBookList(Book);
+	void WriteBookList();		
+	void ModifyBookList(Book*);
 	void DeleteBookList(string);
 	void issueBookToStudentFromLibrary(Student, string);
 	void submitIssuedBookFromStudentInTheLibrary(string, string);
 	void read_the_student_library_card();
-
+	
+	void acceptBookList();
+	void displayBookList();
+	void addBook(Book*);
+	Book* getBook(int);
 };
