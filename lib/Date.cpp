@@ -1,12 +1,4 @@
 #include "Date.h"
-#include <iostream>
-#include <fstream>
-
-using namespace std;
-
-Date::Date(){
-
-}
 
 Date::Date(int day, int month, int year){
 	this->day = day;
@@ -38,36 +30,3 @@ void Date::set_month(int month){
 void Date::set_year(int year){
 	this->year = year;
 }
-
-void Date::acceptDate(){
-	cin >> this->day >> this->month >> this->year;
-}
-
-void Date::displayDate(){
-	cout << this->day << " " << this->month << " " << this->year << endl;
-}
-
-
-// This works
-void Date::writeDate(){
-	ofstream out;
-	out.open("date.dat", ios::app);
-
-	out.write((char*)this, sizeof(*this));
-	
-	return;
-}
-
-void Date::readDate(){
-	ifstream in;
-	in.open("date.dat", ios::in | ios::binary);
-	if (!in){
-		cout << "File not found" << endl;
-	}
-	else{
-		while(in.read((char*)this, sizeof(*this)))
-			in.close();
-	}
-	return;
-}
-

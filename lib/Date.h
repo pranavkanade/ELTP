@@ -15,9 +15,4 @@ public:
 	void set_day(int);
 	void set_month(int);
 	void set_year(int);
-
-	void acceptDate();
-	void displayDate();
-	void writeDate();
-	void readDate();
 };
