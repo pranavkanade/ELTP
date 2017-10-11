@@ -36,6 +36,6 @@ public:
 	void setBookQuantity(int);
 	void setBookEdition(int);
 
-	void AcceptBookDetails(int, string, string, int, string, int, Date, int);
+	void AcceptBookDetails();
 	void displayBookDetails();
 };
