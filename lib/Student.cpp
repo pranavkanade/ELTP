@@ -40,16 +40,16 @@ void Student::setDate(Date dob){
 void Student::acceptStudentDetails(){
 	cout << "Student Name : ";
 	getline(cin, this->studentName);
-	fflush(stdin);
 	cout << endl << "Student Id : ";
 	getline(cin, this->studentId);
-	fflush(stdin);
 	cout << endl << "Student dob (use <space>) : ";
-	this->dob.acceptDate();							// accepting date you have to write the line before
-	fflush(stdin);
+	int day, month, year;
+	cin >> day >> month >> year;
+	this->dob.set_day(day);
+	this->dob.set_month(month);
+	this->dob.set_year(month);
 	cout << endl << "student per : ";
 	cin >> this->per;
-	fflush(stdin);
 }
 
 void Student::displayStudentDetails(){
